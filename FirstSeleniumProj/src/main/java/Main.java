@@ -1,5 +1,6 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.internal.MouseAction;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -127,7 +128,25 @@ public class Main {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//option[@class='select__option'][@value='12']")));*/
 
         //Вар 10
+        //driver.findElement(By.xpath("//span[./select[@class='select__control']]/button")).click();
+        //Thread.sleep(10000);
+        //driver.findElement(By.xpath("div[@class='select__list']//span[text()='Показать по 12']")).isSelected();
+        //Не работает
+        //driver.findElement(By.xpath("//div[@class='select__list']/div[./*[contains(text(),'Показывать по 12')]]")).click();
+        //Не работает
+        //driver.findElement(By.xpath("//div[@class='select__list']/div[./*[contains(text(),'Показывать по 12')]]")).click();
+        //Не работает
+        //driver.findElement(By.xpath("//div[@class='select__list']/div[1]")).click();
+        //driver.findElement(By.xpath("//button[@role='listbox']")).click();
+        //Thread.sleep(10000);
 
+        //ТОже работает:Кликает, но не выбирает
+        //driver.findElement(By.xpath("//button[@role='listbox']")).click();
+        //driver.findElement(By.xpath("//button[@role='listbox']")).sendKeys("Показать по 12");
+
+        //ТОже работает:Кликает, но не выбирает
+        //driver.findElement(By.xpath("//button[contains(@class,'select__button')]")).click();
+        Thread.sleep(10000);
         //driver.close();
     }
 
